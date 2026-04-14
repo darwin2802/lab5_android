@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main_root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0F172A"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="G-Force Dynamics"
+        android:textColor="#38BDF8"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <View
+        android:id="@+id/stability_bar"
+        android:layout_width="100dp"
+        android:layout_height="4dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="15dp"
+        android:background="#22C55E" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#1E293B"
+        android:orientation="vertical"
+        android:padding="15dp"
+        android:layout_marginBottom="10dp">
+        <TextView
+            android:id="@+id/tv_gforce"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1.00 G"
+            android:textColor="#FACC15"
+            android:textSize="48sp"
+            android:textStyle="bold"/>
+        <TextView
+            android:id="@+id/tv_max_g"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Peak recorded: 0.00 G"
+            android:textColor="#EF4444"
+            android:textSize="14sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#1E293B"
+        android:padding="12dp"
+        android:layout_marginBottom="15dp"
+        android:gravity="center_vertical">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="ALARM LIMIT (G):"
+            android:textColor="#94A3B8"
+            android:textStyle="bold"
+            android:textSize="12sp"/>
+        <EditText
+            android:id="@+id/et_threshold"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:text="2.5"
+            android:inputType="numberDecimal"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#38BDF8"
+            android:textAlignment="center"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/chart_container"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:gravity="bottom"
+        android:orientation="horizontal"
+        android:layout_marginBottom="20dp"/>
+
+    <Button
+        android:id="@+id/btn_open_graph"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="OPEN ANALYTICS"
+        android:backgroundTint="#22C55E"
+        android:textColor="#0F172A"
+        android:textStyle="bold"
+        android:layout_marginBottom="10dp"/>
+
+    <Button
+        android:id="@+id/btn_reset"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="RESET ALL"
+        android:backgroundTint="#38BDF8"
+        android:textColor="#0F172A"/>
+
+</LinearLayout>
